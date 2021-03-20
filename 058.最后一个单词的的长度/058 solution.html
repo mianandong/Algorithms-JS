@@ -47,6 +47,38 @@
         console.log(lengthOfLastWord(s4));
 
     </script>
+    
+    
+    <script>
+        // Source : https://leetcode.com/problems/length-of-last-word/
+        // Author : xuwei
+
+        /**
+         * @param {string} s
+         * @return {number}
+         */
+        var lengthOfLastWord = function(s) {
+            s = s.trim();
+            if (s.length === 0) {
+                return 0;
+            }
+
+            let index = s.lastIndexOf(' ');
+            let word = s.slice(index + 1, s.length + 1);
+            return word.length;
+        };
+        
+        //测试
+        var s1 = "Hello World";
+        var s2 = "Hello World m";
+        var s3 = "Hello World  ";
+        var s4 = "  n  ";
+        console.log(lengthOfLastWord(s1));
+        console.log(lengthOfLastWord(s2));
+        console.log(lengthOfLastWord(s3));
+        console.log(lengthOfLastWord(s4));
+
+    </script>
 </body>
 
 </html>
